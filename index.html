@@ -22,7 +22,7 @@
 				}
 				return result;
 			}
-			input.oninput=function(){output.textContent=punchcard(input.value);}
+			input.oninput=function(){output.textContent=punchcard("\/\/begin\n"+input.value+"\n\/\/eof\n");}
 
 		
 			
