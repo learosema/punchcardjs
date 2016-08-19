@@ -1,0 +1,42 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>punchcard generator</title>
+	</head>
+	<body>
+		<h1>punchcard.js</h1>
+		<p><textarea id="input" cols="80" rows="25"></textarea></p>
+		<p><pre id="output" readonly cols="80" rows="25"></pre></p>
+		<script>
+			function punchcard(s,e,x,y,code) {
+				for(x=[],e=s.length;e--;){
+					code=s.charCodeAt(e)
+					for(y=8,x[e]="";y--;)
+						x[e]=String.fromCharCode(32+5728*(code%2))+x[e],code>>=1
+				}
+				var result = "";
+				console.log(x.length)
+				for(var i=0;i<x.length;i++){
+					if(i>0 &&i%4 ==0)result+="\n";
+					result += x[i]
+				}
+				return result;
+			}
+			input.oninput=function(){output.textContent=punchcard(input.value);}
+
+		
+			
+		
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
