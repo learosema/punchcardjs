@@ -8,5 +8,7 @@ On load, it searches all script tags' contents. If there is a u+1680 char, it tr
 Demo: http://codepen.io/terabaud/pen/pbBAYb
 
 Used resources: 
+
 https://github.com/jagracey/PhantomScript
+
 https://github.com/jagracey/Awesome-unicode
